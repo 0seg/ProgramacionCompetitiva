@@ -1,34 +1,24 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-bool si(char palabra[], int longitud){
-    for(int i = 0; i < longitud; i++){
-    if(palabra[i] != palabra[longitud-i-1])
-        return false;
+bool si(string &t){
+    int l = 0, r = t.size()-1;
+    while (l<=r){
+        if(t[l] != t[r]) return false;
+        
+        l++; r--;
     }
     return true;
-
 }
 
-
 int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    int n;
-    cin >> n;
-    for(int i = 0; i < n; i++){
-        char palabra[1001];
-        cin >> palabra;
+    string t;
 
-        int longitud = strlen(palabra);
+    cin >> t;
+
+    if(si(t)){
+        cout << "Si" <<"\n";
         
-        cout << (si(palabra, longitud) ? "P" : "NP") << endl;
-
-    }
-
-    
-
-    
-
-
+    }else cout << "No" << "\n";
 
 }
