@@ -2,11 +2,6 @@
 using namespace std;
 
 long long  mcd(long long a, long long b){
-
-    if(b>a){
-        swap(a,b);
-    }
-
     while (b!=0){
         long long p = a%b;
         a = b; 
@@ -14,8 +9,6 @@ long long  mcd(long long a, long long b){
     }
     return a;
 }
-
-
 
 int main(){
     int n; cin >> n;
