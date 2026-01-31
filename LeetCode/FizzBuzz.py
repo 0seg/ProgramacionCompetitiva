@@ -9,5 +9,5 @@ class Solution:
             elif e % 5 == 0:
                 ls.append("Buzz")
             else:
-                ls.append(str(e})
+                ls.append(str(e))
         return ls
