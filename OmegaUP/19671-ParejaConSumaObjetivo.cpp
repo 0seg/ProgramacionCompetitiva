@@ -12,7 +12,7 @@ int main(){
     }
 
     for(int i = 0;i<vi.size()-1;++i){
-        for(f = i+1; f< vi.size();f++)
+        for(int f = i+1; f< vi.size();f++)
             if(vi[i]+vi[f] == k){
                 cout << "Si";
                 e = true;
